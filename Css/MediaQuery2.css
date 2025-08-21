@@ -1,0 +1,49 @@
+/* @media(max-width: 768px) and (max-height: 500px){
+    body{
+        background-color: indianred;
+    }
+}
+
+@media(max-width: 400px) , (max-height: 300px){
+    body{
+        background-color: lightgreen;
+    }
+} */
+
+/* Have the default body be white 
+Add 3 breakpoints that the background color changes
+   1) Tablet portrait
+   2) Mobile landscape
+   3) Ultra Samll (Short or narrow screen) */
+
+   /* Default white background */
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* 1. Tablet portrait (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* 2. Mobile landscape (max-width: 568px) */
+@media (max-width: 568px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* 3. Ultra small (max-width: 360px or max-height: 400px) */
+@media (max-width: 360px), (max-height: 400px) {
+  body {
+    background-color: lightcoral;
+  }
+}
+
+

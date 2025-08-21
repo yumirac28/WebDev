@@ -1,0 +1,17 @@
+header{
+    height: 200px;
+    background-color: mediumblue;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 2rem;
+}
+
+@media(max-height: 500px){
+header{
+    height: 100px;
+    padding: 20px;
+    font-size: 1.2rem;
+    background-color: navy;
+}
+}

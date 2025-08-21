@@ -1,0 +1,7 @@
+Question 1
+
+Create a form with Name and Age only You can comment out the previous
+form or create a new form in a new page called form2.html
+Create a function that, when submit is clicked
+Alert if name is empty, alert if age is less than 18 Show
+"Form submitted successfull" if all checks pass

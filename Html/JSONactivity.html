@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Saver</title>
+</head>
+<body>
+    <h2>Save Foods</h2>
+
+    <!-- Form -->
+    <form id="foodForm">
+        <input type="text" id="foodInput" placeholder="Enter food name" required>
+        <button type="submit">Save Food</button>
+    </form>
+
+    <!-- Display -->
+    <h3>Saved Foods</h3>
+    <ul id="foodList"></ul>
+
+    <script>
+        const form = document.getElementById("foodForm");
+        const foodInput = document.getElementById("foodInput");
+        const foodList = document.getElementById("foodList");
+
+        // Load saved foods when page opens
+        document.addEventListener("DOMContentLoaded", displayFoods);
+
+        // Save food on form submit
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let food = foodInput.value.trim();
+            if (food === "") return;
+
+            // Get existing foods (or empty array if none)
+            let foods = JSON.parse(localStorage.getItem("foods")) || [];
+
+            // Add new food
+            foods.push(food);
+
+            // Save to localStorage
+            localStorage.setItem("foods", JSON.stringify(foods));
+
+            // Update UI
+            displayFoods();
+
+            // Clear input
+            foodInput.value = "";
+        });
+
+        // Function to display all saved foods
+        function displayFoods() {
+            let foods = JSON.parse(localStorage.getItem("foods")) || [];
+            foodList.innerHTML = "";
+
+            foods.forEach(food => {
+                let li = document.createElement("li");
+                li.textContent = food;
+                foodList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
