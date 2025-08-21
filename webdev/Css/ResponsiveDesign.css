@@ -1,0 +1,23 @@
+nav {
+    background-color: papayawhip;
+    padding: 12px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0%;
+    padding: 0;
+}
+
+nav li {
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}

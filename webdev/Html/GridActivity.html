@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html Long="en">
+    <title>Grid Activity</title>
+
+<style>
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(1,auto);
+    }
+
+    .box{
+        background: lightcoral;
+        padding: 130px;
+        text-align: center;
+        font-size: 20px;
+        border: 1px solid cornsilk;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(88, 164, 176, 2);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .box:hover{
+        background-color: black;
+        color:antiquewhite;
+    }
+    
+</style>
+<body>
+    
+    <div class="grid">
+        <div class="box"><h1>Low</h1><price>100</div>
+        <div class="box"><h1>Basic</h1><price>200</price></div>
+        <div class="box"><h1>Premium</h1><price>300</div>
+    </div>
+</body>
+</html>

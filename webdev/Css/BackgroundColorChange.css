@@ -1,0 +1,38 @@
+.hero{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    background-image:
+    linear-gradient(to left, #8B0000, #000000) ;
+    color: white;
+}
+
+.hero h1{
+    font-size: 9vw;
+}
+
+/*Scaling up, mobile to desktop*/
+@media (min-width: 750px){
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.4rem;
+    }
+    .hero {
+        height: 90vh;
+        padding: 2rem;
+    }
+
+@media (min-width:1024px) {
+    .hero h1{
+        font-size: 5rem;
+    }
+    .hero p {
+        font-size: 1.6rem;
+    }
+}
+}
